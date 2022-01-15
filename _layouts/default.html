@@ -51,7 +51,7 @@
         <h4>Articles</h4>
         {% for post in site.posts %}   
         <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
-        <h4>{{ post.date | date: "%B %e, %Y" }}</h4>
+        <p><small>{{ post.date | date: "%B %e, %Y" }}</small></p>
         <!-- <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong> . {{ post.category }} . <a href="http://myname.github.com{{ post.url }}#disqus_thread"></a></small></p>             -->
         {% endfor %}
       </section>
