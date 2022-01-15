@@ -10,6 +10,8 @@ I use this blog to document, as well as share topics relating to code, data scie
 
 If you wish to connect, feel free to email  me at playgrdstar@gmail.com.
 
+Changed
+
 <!-- 
 You can use the [editor on GitHub](https://github.com/playgrdstar/quaintitative/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
