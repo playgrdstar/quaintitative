@@ -1,2 +1,4 @@
 Customization of templates -
 https://aregsar.com/blog/2019/how-to-customize-your-github-pages-blog-layout-in-five-minutes/
+
+https://mademistakes.com/mastering-jekyll/how-to-link/#about-siteurl-and-sitebaseurl
