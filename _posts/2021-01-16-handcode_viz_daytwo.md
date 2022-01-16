@@ -2,7 +2,7 @@
 layout: default
 title:  "3 Days of Hand Coding Visualisations - Day 2"
 date:   2021-01-16 00:00:02 +0000
-permalink: /handcode_viz_day_1/
+permalink: /handcode_viz_day_2/
 ---
 
 ## 3 Days of Hand Coding Visualisations - Day Two
