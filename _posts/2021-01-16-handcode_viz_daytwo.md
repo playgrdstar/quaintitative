@@ -41,29 +41,31 @@ There really is no need to retype out these things everytime. Just use this as t
 - `<div><p>...</p></div>` is where we place the text we want. div tag defines a section; whereas p tag gets it to paragraph text
 - `<h2 class='redtext></h2>` means that we set a class of ‘red text’ to whatever is within the tags; and it’s style is dictated by what we set within `<style></style>` earlier.
 
-	<!DOCTYPE html>
-	<meta charset="utf-8">
-	<head>
-	
-	<style>
-	.redtext{
-		background-color: red;
-	}
-	</style>
-	</head>
-	
-	<body>
-	
-		<h1 class='redtext'>This is a webpage title</h1>
-		<h1> This is another title </h1>
-	
-		<div><p>This is a para</p></div>
-		<h2 class='redtext' id='titleid'>This is big text</h2>
-		<h6 class='redtext' >This is big text</h6>
-	
-	<script>
-	</script>
-	</body>
+```
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+
+<style>
+.redtext{
+	background-color: red;
+}
+</style>
+</head>
+
+<body>
+
+	<h1 class='redtext'>This is a webpage title</h1>
+	<h1> This is another title </h1>
+
+	<div><p>This is a para</p></div>
+	<h2 class='redtext' id='titleid'>This is big text</h2>
+	<h6 class='redtext' >This is big text</h6>
+
+<script>
+</script>
+</body>
+```
 
 Next, from this basic template, we move on to see how to use the d3.js, as well as the p5.js libraries. The code that we will be referring to can be found [here][7].
 
