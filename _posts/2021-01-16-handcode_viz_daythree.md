@@ -47,12 +47,12 @@ var lcheight = 200 - 2*lcmargin;
 Then, like the yesterday, we append a SVG canvas for the line plot.
 ```
 var linesvg = d3.select('#d3line')
-			.append('svg')
-			.attr('width', lcwidth + 2*lcmargin)
-			.attr('height', lcheight + 2*lcmargin)
-		.append('g')
-			.attr('transform', 
-				'translate(' + lcmargin + ',' + lcmargin + ')');
+		.append('svg')
+		.attr('width', lcwidth + 2*lcmargin)
+		.attr('height', lcheight + 2*lcmargin)
+	.append('g')
+		.attr('transform', 
+			'translate(' + lcmargin + ',' + lcmargin + ')');
 ```
 
 The second part, where we `append('g)` is new. Basically we create a group within the SVG canvas for the line plot. This allows us to later place and move the entire plot as a group, instead of having to deal with each element within separately. 
@@ -62,12 +62,12 @@ Here we transform it left and down by the margin (`lcmargin`) we set earlier.
 Next we set the title of the chart. Everything before `.text` is just used to set the position, font size and color.
 ```
 linesvg.append('text')
-		.attr('x', lcwidth/2)
-		.attr('y', lcmargin-45)
-		.style('text-anchor', 'middle')
-		.style('fill', color1)
-		.style('font-size', '10px')
-		.text('Currency Rates');
+	.attr('x', lcwidth/2)
+	.attr('y', lcmargin-45)
+	.style('text-anchor', 'middle')
+	.style('fill', color1)
+	.style('font-size', '10px')
+	.text('Currency Rates');
 ```
 Then we create a series of variables that acts as helpers.
 ```
@@ -81,9 +81,9 @@ var lineY = d3.scaleLinear().range([lcheight,0]);
 Now for the main star of the show.
 ```
 var valueLine = d3.line()
-				.curve(d3.curveCatmullRom)
-				.x(function(d){return lineX(d.Date);})
-				.y(function(d){return lineY(d.Price);});
+			.curve(d3.curveCatmullRom)
+			.x(function(d){return lineX(d.Date);})
+			.y(function(d){return lineY(d.Price);});
 ```
 
 This is the function that will later translate the data into a line plot. It will use the CatmullRom method to interpolate between points, and assign all dates to the x axis, and price values to the y axis.
@@ -99,48 +99,48 @@ Now we declare the core function - _initialiseLine_ - which will use the functio
 var initialiseLine = function(ticker){
 
 // d3.csv helps to read the csv file. 
-	d3.csv('../data/' + ticker+'.csv', function(error, data){
+d3.csv('../data/' + ticker+'.csv', function(error, data){
 
-	// This catches any errors, e.g. if the data file cannot be read.
-		if (error) throw error;
+// This catches any errors, e.g. if the data file cannot be read.
+	if (error) throw error;
 
-	// This parses the data, using the parseTime function we created earlier. + converts the data into a number (otherwise it would be text)
-		data.forEach(function(d){
-			d.Date = parseTime(d.time);
-			d.Price = +d.c;
+// This parses the data, using the parseTime function we created earlier. + converts the data into a number (otherwise it would be text)
+	data.forEach(function(d){
+		d.Date = parseTime(d.time);
+		d.Price = +d.c;
+	});
+
+//This continues where we started earlier. We get the domain of the data (min and max), and map it to the range we sent earlier (i.e. the width and height of the screen).
+	lineX.domain(d3.extent(data, function(d){
+		return d.Date;
+	}));
+	lineY.domain([
+		d3.min(data, function(d){return d.Price;}),
+		d3.max(data, function(d){return d.Price;})
+	]);
+
+//This line just calls the x and y axis
+	xAxisCallLine.scale(lineX);
+	yAxisCallLine.scale(lineY);
+
+//Here we use the linesvg function we set earlier and pass in the data from the csv file to draw a path. The other lines set the style of the line
+	linesvg.append('path')
+		.data([data])
+		.attr('class', 'line')
+		.attr('d', valueLine)
+		.style('fill', 'none')
+		.style('stroke', color1)
+		.style('stroke-width', '1px');
+
+//Here we place the x and y axis on the page
+	linesvg.append('g')
+		.attr('transform', 'translate(0,' + lcheight + ')')
+		.attr('class', 'x axis')
+		.call(xAxisCallLine);
+	linesvg.append('g')
+		.attr('class', 'y axis')
+		.call(yAxisCallLine);
 		});
-
-	//This continues where we started earlier. We get the domain of the data (min and max), and map it to the range we sent earlier (i.e. the width and height of the screen).
-		lineX.domain(d3.extent(data, function(d){
-			return d.Date;
-		}));
-		lineY.domain([
-			d3.min(data, function(d){return d.Price;}),
-			d3.max(data, function(d){return d.Price;})
-		]);
-	
-	//This line just calls the x and y axis
-		xAxisCallLine.scale(lineX);
-		yAxisCallLine.scale(lineY);
-
-	//Here we use the linesvg function we set earlier and pass in the data from the csv file to draw a path. The other lines set the style of the line
-		linesvg.append('path')
-			.data([data])
-			.attr('class', 'line')
-			.attr('d', valueLine)
-			.style('fill', 'none')
-			.style('stroke', color1)
-			.style('stroke-width', '1px');
-
-	//Here we place the x and y axis on the page
-		linesvg.append('g')
-			.attr('transform', 'translate(0,' + lcheight + ')')
-			.attr('class', 'x axis')
-			.call(xAxisCallLine);
-		linesvg.append('g')
-			.attr('class', 'y axis')
-			.call(yAxisCallLine);
-			});
 }
 ```
 We have another function _updateLine_ that does the exact same thing, but we set it here to refresh the page when a new ticker is selected. I won’t go into the details as the code is almost identical to the one above. There is a easier way to do this, but I wanted to keep the two separate so that it’s clearer for you how they work later.

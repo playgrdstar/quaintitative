@@ -128,20 +128,20 @@ Then we select the section div with the id of ‘tom’, and append an SVG eleme
 ```
 var width = 400, height = 400;
 var svg = d3.select('#tom')
-			.append('svg')
-			.attr('width', width)
-			.attr('height', height);
+		.append('svg')
+		.attr('width', width)
+		.attr('height', height);
 ```
 
 Next we append a circle to this SVG canvas. We also set it’s properties.
 ```
 var vectorcircle = svg.append('circle')
-						.attr('cx', width/2)
-						.attr('cy', height/2)
-						.attr('r', 100)
-						.style('fill', 'orange')
-						.style('stroke', 'blue')
-						.style('stroke-width', '3px')
+				.attr('cx', width/2)
+				.attr('cy', height/2)
+				.attr('r', 100)
+				.style('fill', 'orange')
+				.style('stroke', 'blue')
+				.style('stroke-width', '3px')
 ```
 
 When you refresh the page, you should now see a circle:
