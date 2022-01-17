@@ -55,12 +55,12 @@ There really is no need to retype out these things everytime. Just use this as t
 
 <body>
 
-	<h1 class='redtext'>This is a webpage title</h1>
-	<h1> This is another title </h1>
+<h1 class='redtext'>This is a webpage title</h1>
+<h1> This is another title </h1>
 
-	<div><p>This is a para</p></div>
-	<h2 class='redtext' id='titleid'>This is big text</h2>
-	<h6 class='redtext' >This is big text</h6>
+<div><p>This is a para</p></div>
+<h2 class='redtext' id='titleid'>This is big text</h2>
+<h6 class='redtext' >This is big text</h6>
 
 <script>
 </script>
