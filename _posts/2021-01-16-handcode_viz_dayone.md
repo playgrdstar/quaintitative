@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  3 Days of Hand Coding Visualisations - Day 1
-description: Series of tutorials on hand coding data visualisations
+description: Series of tutorials on hand coding data visualisations with Javascript and D3.js
 date:   2021-01-16 00:00:01 +0000
 permalink: /handcode_viz_day_1/
 ---
@@ -13,7 +13,7 @@ _All code used in this set of tutorials is available at this github [link][1]. Y
 
 As we are going to be showing off our creations in the web browser, we need to have an understanding of how a web page works. A basic understanding of HTML, CSS and Javascript is what I hope to provide in this Day One tutorial.
 
-** HTML 101**
+**HTML 101**
 First, a super basic HTML page that we can easily use for coding a data visualisation looks like this.
 ```
 <!DOCTYPE html>
@@ -29,17 +29,17 @@ First, a super basic HTML page that we can easily use for coding a data visualis
 
 </body>
 ```
-Let’s break this down. It’s quite simple actually. Let’s call each of these words enclosed in \<\> tags.
+Let’s break this down. It’s quite simple actually. Let’s refer to each of these words enclosed in `<>` as tags.
 
 The first two lines are not that critical to know. Just know that they are almost always the first two lines of a modern webpage.
 - Right at the top, we have the tag `<!DOCTYPE html>` right at the top. This just tells the browser what version of HTML you are writing in. There’s no real need to understand this, but just know that this indicates a HTML 5 webpage. Anything else (which is usually much much longer) at the top of the page indicates that the webpage was written with an older version of HTML.
-- The next tag `<meta charset="utf-8">` basically specifies what character set the webpage is written. Again no real need to know the technical details.
+- The next tag `<meta charset="utf-8">` basically specifies what character-set the webpage is written. Again no real need to know the technical details.
 
 The next few lines are important.
 - `<head>...</head>` This is an opening and closing tag that marks the head of the document. The head of the document is where you place meta information that is not visible on the webpage. It’s also where we set out libraries and styles that we will use for the webpage
 - `<script>...</script>` Within the script tags, we can insert javascript codes, or links to javascript that we use within the webpage
 - `<style>...</style>` Within the style tags, we can insert code that allows us to style the webpage, or links to a stylesheet. These are cascading style sheets, or what is known as CSS
-- `<body>...</body>` is self explanatory. It’s where code for the body of our webpage, which is what we see when we visit any webpage, resides.
+- `<body>...</body>` is self explanatory. It’s where code for the body of our webpage, which is what we see when we visit any webpage, resides
 
 And that’s it. You now know HTML (or at least the rudimentary parts of HTML) needed to get things up and running.
 
@@ -74,7 +74,7 @@ Using the HTML skeleton you built earlier, insert the title and the size of the 
  
 Now, just copy and paste these lines between the `<svg></svg>` tags. 
 
-For the axis of the line chart.
+For the axis of the line chart -
 ```
 <g>
 <line stroke='steelblue' x1="90" x2="90" y1="5" y2="371">
@@ -86,7 +86,7 @@ For the axis of the line chart.
 </g>
 ```
 
-For the labels.
+For the labels - 
 ```
 <g transform='translate(0,10)'>
 <text x="100" y="400">2013</text>
@@ -106,7 +106,7 @@ For the labels.
 </g>
 ```
 
-For the circles showing each datapoint.
+For the circles showing each datapoint -
 ```
 <g>
 <circle cx="90" cy="192" r="4" fill='steelblue'></circle>
@@ -117,7 +117,7 @@ For the circles showing each datapoint.
 </g>
 ```
 
-And the line plotting out the data points.
+And the line plotting out the data points -
 ```
 <polyline
 		fill="none"

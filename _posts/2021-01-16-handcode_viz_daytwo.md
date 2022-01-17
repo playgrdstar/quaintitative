@@ -15,7 +15,7 @@ Yesterday, we literally hand coded a visualisation. We measured and placed lines
 
 And that is really why libraries exist. So that we can build on what someone else has already spent a lot of time on.
 
-** Languages and Libraries**
+**Languages and Libraries**
 The endgame is to code a chart in d3.js. But before we get into how to code a chart in d3.js, it’s probably good to know what else there is first.
 
 - Languages - d3.js is Javascript library. There are other options. We can also code visualisations in Python using Matplotlib. And we can even have interactive charts when we code in environments like a Jupyter Notebook and make use of widgets.
@@ -28,7 +28,7 @@ Certainly not the focus of this series, but for the curious, I have put together
 - Vega.js - This is just one example of a higher level Javascript chart library. If I’m not wrong, it’s built on d3.js. Instead of having to write out Javascript, you use a standard set of vega.js codes in a [html][4] file, and then use a [json][5] file to set out the data and charts that you would like to visualise.
 
 
-** Let’s start!**
+**Let’s start!**
 Let’s do quick recap of HTML and CSS by going through the code of this basic page available [here][6].
 
 There really is no need to retype out these things everytime. Just use this as the base. 
@@ -49,7 +49,7 @@ There really is no need to retype out these things everytime. Just use this as t
 
 <style>
 .redtext{
-	background-color: red;
+background-color: red;
 }
 </style>
 </head>
@@ -73,20 +73,21 @@ Next, from this basic template, we move on to see how to use the d3.js, as well 
 You will also need the [libs][8] found here if you need to run the code.
 
 First, let’s take a look at how we import the libraries that we need.
-	<head>
-	<!-- Bootstrap used for the positioning divs -->
-	<!-- CSS -->
-	<link rel="stylesheet" href="./lib/bootstrap3/css/bootstrap.min.css">
-	<link rel="stylesheet" href="./lib/css/font-awesome.min.css">
-	
-	<!-- JavaScript - Local -->
-	<script src="./lib/jquery/jquery-3.2.1.min.js"></script>
-	<script src="./lib/bootstrap3/js/bootstrap.min.js"></script>
-	<script src="./lib/d3/d3.min.js"></script>
-	
-	<!-- JavaScript - CDN -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
-	
+```
+<head>
+<!-- Bootstrap used for the positioning divs -->
+<!-- CSS -->
+<link rel="stylesheet" href="./lib/bootstrap3/css/bootstrap.min.css">
+<link rel="stylesheet" href="./lib/css/font-awesome.min.css">
+
+<!-- JavaScript - Local -->
+<script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="./lib/bootstrap3/js/bootstrap.min.js"></script>
+<script src="./lib/d3/d3.min.js"></script>
+
+<!-- JavaScript - CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+```
 
 We can import libraries from a location on your computer (local); or from the interwebs (usually using a CDN - content delivery network). Here we show how we can do both.
 
@@ -97,46 +98,51 @@ This just means that we go up one level (from where this code is, under the src 
 We do this for all the other libraries and stylesheets. Here we use Bootstrap (which we can cover in another post) as well, so we import those as well, along with the jQuery library (which is needed for Bootstrap).
 
 For the styling of the page, we just add a few lines to allow for the div sections to be entered and sized automatically.
-
-	<style>
-	/*To center (horizontally and vertically) the contents of the div*/
-	div {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	</style>
+```
+<style>
+/*To center (horizontally and vertically) the contents of the div*/
+div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+</style>
+```
 
 **d3.js**
 Next we set out two sections and give them each a unique ID. One will be for the d3.js visualisation, and the other will be for the p5.js one.
+```
+<div class="col-sm-12" id='tom'>
+// Our d3.js visualisation will go here.
+</div>
 
-	<div class="col-sm-12" id='tom'>
-	// Our d3.js visualisation will go here.
-	</div>
-
-	<div class="col-sm-4" id = 'p5canvas'>
-	// Our p5.js visualisation will go here.
-	</div>
+<div class="col-sm-4" id = 'p5canvas'>
+// Our p5.js visualisation will go here.
+</div>
+```
 
 And now for d3.js. What we will do first declare the width and height variables and set them to values of 400.
 
 Then we select the section div with the id of ‘tom’, and append an SVG element to it, and set its width and height with this line.
 
-	var width = 400, height = 400;
-	var svg = d3.select('#tom')
-						  .append('svg')
-						  .attr('width', width)
-						  .attr('height', height);
+```
+var width = 400, height = 400;
+var svg = d3.select('#tom')
+			.append('svg')
+			.attr('width', width)
+			.attr('height', height);
+```
 
 Next we append a circle to this SVG canvas. We also set it’s properties.
-
-	var vectorcircle = svg.append('circle')
-						  .attr('cx', width/2)
-						  .attr('cy', height/2)
-						  .attr('r', 100)
-						  .style('fill', 'orange')
-						  .style('stroke', 'blue')
-						  .style('stroke-width', '3px')
+```
+var vectorcircle = svg.append('circle')
+						.attr('cx', width/2)
+						.attr('cy', height/2)
+						.attr('r', 100)
+						.style('fill', 'orange')
+						.style('stroke', 'blue')
+						.style('stroke-width', '3px')
+```
 
 When you refresh the page, you should now see a circle:
 - right at the centre of the page (as cx is half the width of the page, and cy is half the height)
@@ -154,20 +160,23 @@ Every p5.js code (or sketch as it is usually called), has a setup and a draw fun
 - the draw function is obviously where you draw to the screen. Unless we declare a noLoop on the setup function, draw will keep running and drawing to the screen as long as you are on the page.
 
 In the setup function, we first create a canvas with the same height and width as the SVG canvas, and give it a background color of white.
-
-	function setup() {
-	  var canvas = createCanvas(width, height);
-	  canvas.parent('p5canvas');
-	  background('white');
-	}
+```
+function setup() {
+	var canvas = createCanvas(width, height);
+	canvas.parent('p5canvas');
+	background('white');
+}
+```
 
 And then we draw a circle, by stating that it’s fill should orange, and that it should have no stroke outline.
 
-	function draw(){
-		fill('orange');
-		noStroke();
-		ellipse(width/2, height/2, 100, 100);
-	}
+```
+function draw(){
+	fill('orange');
+	noStroke();
+	ellipse(width/2, height/2, 100, 100);
+}
+```
 
 And that’s it! You are now able to create stuff in a browser using the d3.js and p5.js libraries.
 
