@@ -1,6 +1,7 @@
 ---
 layout: default
-title:  "3 Days of Hand Coding Visualisations - Day 2"
+title:  3 Days of Hand Coding Visualisations - Day 2
+description: Series of tutorials on hand coding data visualisations with Javascript and D3.js
 date:   2021-01-16 00:00:02 +0000
 permalink: /handcode_viz_day_2/
 ---

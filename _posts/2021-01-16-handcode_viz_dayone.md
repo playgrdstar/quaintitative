@@ -1,6 +1,7 @@
 ---
 layout: default
-title:  "3 Days of Hand Coding Visualisations - Day 1"
+title:  3 Days of Hand Coding Visualisations - Day 1
+description: Series of tutorials on hand coding data visualisations
 date:   2021-01-16 00:00:01 +0000
 permalink: /handcode_viz_day_1/
 ---
