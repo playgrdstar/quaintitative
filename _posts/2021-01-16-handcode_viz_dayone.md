@@ -15,18 +15,18 @@ As we are going to be showing off our creations in the web browser, we need to h
 ** HTML 101**
 First, a super basic HTML page that we can easily use for coding a data visualisation looks like this.
 ```
-	<!DOCTYPE html>
-	<meta charset="utf-8">
-	
-	<head>
-	<script src="../lib/d3/d3.min.js"></script>
-	<style>
-	</style>
-	</head>
-	
-	<body>
-	
-	</body>
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+<script src="../lib/d3/d3.min.js"></script>
+<style>
+</style>
+</head>
+
+<body>
+
+</body>
 ```
 Let’s break this down. It’s quite simple actually. Let’s call each of these words enclosed in \<\> tags.
 
@@ -49,11 +49,11 @@ The code for this first part is available [here][2].
 SVG stands for Scalable Vector Graphics. Basically, it’s what we can use to draw things on a webpage. We can also use something called the Canvas to draw, but we will go into that later.
 
 Now that you have your webpage skeleton in place, drawing a circle just takes one line.
-
-	<svg width="500" height="500">
-		<circle cx="250" cy="250" r="40" stroke="black" stroke-width="3" fill="red"/>
-	</svg>
-
+```
+<svg width="500" height="500">
+	<circle cx="250" cy="250" r="40" stroke="black" stroke-width="3" fill="red"/>
+</svg>
+```
 `<svg>...</svg>` tells the browser that we are creating an SVG object. We first declare a `<circle/>`. There’s no need for a closing tag here cause of the additional / at the end. With that, it’s a simple matter of declaring the properties of the circle - cx and and cy are its x and y coordinates, r is its radius, stroke, stroke-width and fill the color of its outline stroke, stroke thickness, and fill color respectively.
 
 That’s it! You can now draw things in your browser. The code for this part is available [here][3]. 
@@ -64,10 +64,10 @@ Now let’s do things the really hard way first, before we start learning about 
 
 Using the HTML skeleton you built earlier, insert the title and the size of the SVG object that we will be creating first between the body tags.
 ```
-	<h4 fill='black'>Barebones Chart</h4>
-	<svg width = "600" height = "600">
-	...
-	</svg>
+<h4 fill='black'>Barebones Chart</h4>
+<svg width = "600" height = "600">
+...
+</svg>
 ```
 `<h4>` is a header tag. There also h1, h2, all the way to h6. The only difference is the size. `<svg width='600' height='600'>` sets the width and height of the SVG canvas that we will be drawing things in 
  
@@ -75,59 +75,59 @@ Now, just copy and paste these lines between the `<svg></svg>` tags.
 
 For the axis of the line chart.
 ```
-	<g>
-	<line stroke='steelblue' x1="90" x2="90" y1="5" y2="371">
-	</line>
-	</g>
-	
-	<g>
-	<line stroke='steelblue' x1="90" x2="705" y1="370" y2="370"></line>
-	</g>
+<g>
+<line stroke='steelblue' x1="90" x2="90" y1="5" y2="371">
+</line>
+</g>
+
+<g>
+<line stroke='steelblue' x1="90" x2="705" y1="370" y2="370"></line>
+</g>
 ```
 
 For the labels.
 ```
-	<g transform='translate(0,10)'>
-	<text x="100" y="400">2013</text>
-	<text x="246" y="400">2014</text>
-	<text x="392" y="400">2015</text>
-	<text x="538" y="400">2016</text>
-	<text x="684" y="400">2017</text>
-	<text x="400" y="440">Dates</text>
-	</g>
-	
-	<g transform='translate(-10,0)'>
-	<text x="80" y="15">60</text>
-	<text x="80" y="131">40</text>
-	<text x="80" y="248">20</text>
-	<text x="80" y="373">0</text>
-	<text x="40" y="200">Levels</text>
-	</g>
+<g transform='translate(0,10)'>
+<text x="100" y="400">2013</text>
+<text x="246" y="400">2014</text>
+<text x="392" y="400">2015</text>
+<text x="538" y="400">2016</text>
+<text x="684" y="400">2017</text>
+<text x="400" y="440">Dates</text>
+</g>
+
+<g transform='translate(-10,0)'>
+<text x="80" y="15">60</text>
+<text x="80" y="131">40</text>
+<text x="80" y="248">20</text>
+<text x="80" y="373">0</text>
+<text x="40" y="200">Levels</text>
+</g>
 ```
 
 For the circles showing each datapoint.
 ```
-	<g>
-	<circle cx="90" cy="192" r="4" fill='steelblue'></circle>
-	<circle cx="240" cy="141" fill='steelblue' r="4"></circle>
-	<circle cx="388" cy="179" fill='steelblue' r="4"></circle>
-	<circle cx="531" cy="200" fill='steelblue' r="4"></circle>
-	<circle cx="677" cy="104" fill='steelblue' r="4"></circle>
-	</g>
+<g>
+<circle cx="90" cy="192" r="4" fill='steelblue'></circle>
+<circle cx="240" cy="141" fill='steelblue' r="4"></circle>
+<circle cx="388" cy="179" fill='steelblue' r="4"></circle>
+<circle cx="531" cy="200" fill='steelblue' r="4"></circle>
+<circle cx="677" cy="104" fill='steelblue' r="4"></circle>
+</g>
 ```
 
 And the line plotting out the data points.
 ```
-	<polyline
-		 fill="none"
-		 stroke="steelblue"
-		 stroke-width="1"
-		 points="
-		   90,192
-		   240,141
-		   388,179
-		   531,200
-		   677,104"/>
+<polyline
+		fill="none"
+		stroke="steelblue"
+		stroke-width="1"
+		points="
+		90,192
+		240,141
+		388,179
+		531,200
+		677,104"/>
 ```
 
 Insert the code step by step and you will see the chart slowly appear, like magic. To understand how the code works, just try changing the numbers and properties and it will become quite clear. This is not the most optimal way of hand coding visualisations so I won’t go into great detail. But it should be fairly obvious.
