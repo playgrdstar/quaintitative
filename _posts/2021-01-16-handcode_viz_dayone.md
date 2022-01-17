@@ -14,7 +14,7 @@ As we are going to be showing off our creations in the web browser, we need to h
 
 ** HTML 101**
 First, a super basic HTML page that we can easily use for coding a data visualisation looks like this.
-
+```
 	<!DOCTYPE html>
 	<meta charset="utf-8">
 	
@@ -27,7 +27,7 @@ First, a super basic HTML page that we can easily use for coding a data visualis
 	<body>
 	
 	</body>
-
+```
 Let’s break this down. It’s quite simple actually. Let’s call each of these words enclosed in \<\> tags.
 
 The first two lines are not that critical to know. Just know that they are almost always the first two lines of a modern webpage.
@@ -63,17 +63,18 @@ That’s it! You can now draw things in your browser. The code for this part is 
 Now let’s do things the really hard way first, before we start learning about how to use libraries like D3.js.
 
 Using the HTML skeleton you built earlier, insert the title and the size of the SVG object that we will be creating first between the body tags.
-
+```
 	<h4 fill='black'>Barebones Chart</h4>
 	<svg width = "600" height = "600">
 	...
 	</svg>
-
+```
 `<h4>` is a header tag. There also h1, h2, all the way to h6. The only difference is the size. `<svg width='600' height='600'>` sets the width and height of the SVG canvas that we will be drawing things in 
  
 Now, just copy and paste these lines between the `<svg></svg>` tags. 
 
 For the axis of the line chart.
+```
 	<g>
 	<line stroke='steelblue' x1="90" x2="90" y1="5" y2="371">
 	</line>
@@ -82,8 +83,10 @@ For the axis of the line chart.
 	<g>
 	<line stroke='steelblue' x1="90" x2="705" y1="370" y2="370"></line>
 	</g>
+```
 
 For the labels.
+```
 	<g transform='translate(0,10)'>
 	<text x="100" y="400">2013</text>
 	<text x="246" y="400">2014</text>
@@ -100,8 +103,10 @@ For the labels.
 	<text x="80" y="373">0</text>
 	<text x="40" y="200">Levels</text>
 	</g>
+```
 
 For the circles showing each datapoint.
+```
 	<g>
 	<circle cx="90" cy="192" r="4" fill='steelblue'></circle>
 	<circle cx="240" cy="141" fill='steelblue' r="4"></circle>
@@ -109,9 +114,10 @@ For the circles showing each datapoint.
 	<circle cx="531" cy="200" fill='steelblue' r="4"></circle>
 	<circle cx="677" cy="104" fill='steelblue' r="4"></circle>
 	</g>
-	
+```
 
 And the line plotting out the data points.
+```
 	<polyline
 		 fill="none"
 		 stroke="steelblue"
@@ -122,6 +128,7 @@ And the line plotting out the data points.
 		   388,179
 		   531,200
 		   677,104"/>
+```
 
 Insert the code step by step and you will see the chart slowly appear, like magic. To understand how the code works, just try changing the numbers and properties and it will become quite clear. This is not the most optimal way of hand coding visualisations so I won’t go into great detail. But it should be fairly obvious.
 
