@@ -6,3 +6,5 @@ https://mademistakes.com/mastering-jekyll/how-to-link/#about-siteurl-and-sitebas
 https://kbroman.org/simple_site/pages/overview.html
 
 https://desiredpersona.com/google-analytics-jekyll/
+
+https://github.com/codinfox/codinfox-lanyon/tree/master
