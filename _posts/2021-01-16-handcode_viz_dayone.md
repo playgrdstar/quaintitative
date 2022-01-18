@@ -4,6 +4,7 @@ title:  3 Days of Hand Coding Visualisations - Day 1
 description: Series of tutorials on hand coding data visualisations with Javascript and D3.js
 date:   2021-01-16 00:00:01 +0000
 permalink: /handcode_viz_day_1/
+category: Visualisation
 ---
 
 ## 3 Days of Hand Coding Visualisations - Day One
