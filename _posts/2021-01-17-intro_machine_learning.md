@@ -8,11 +8,11 @@ category: Machine Learning
 ---
 ## (Almost) All the Most Common Machine Learning Algorithms in Javascript
 
-I did a Masters in Knowledge Engineering almost a decade ago. Back then, data science wasn’t even a word. Knowledge engineering was kind of a pre-cursor to data science today. The aim then was to use build systems that could facilitate knowledge management (the hot thing then). We learned things like rule based learning, simple models, and neural networks.
+I did a Masters in Knowledge Engineering almost a decade ago. Back then, data science wasn’t a common term (if it was even used at all). Knowledge engineering was kind of the pre-cursor to data science today. The aim then was to use build systems that could facilitate knowledge management (the hot thing then). We learned things like rule based learning and neural networks.
 
 My recollection of what I learnt then is pretty foggy. 
 
-But I did do remember learning that the best way to understand how a model works is to build a simple implementation of it from scratch. With the wealth of libraries we have access to today, we sometimes forget this.
+But I do remember learning that the best way to understand how a model works is to build a simple implementation of it from scratch. With the wealth of libraries we have access to today, we sometimes forget this.
 
 So I thought it would be good to just write down a whole suite of the most common machine learning methods from scratch in Javascript, let them run right on the client-side in the browser, and visualise their results in the browser using D3.js. I managed to cover - 
 - linear regression
