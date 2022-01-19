@@ -31,15 +31,15 @@ Each combination of OS and software is called an image. You can use images built
 
 So once you have an image, all you need to do is first get the image by pulling it.
 ```
-	docker pull jupyter/minimal-notebook
+docker pull jupyter/minimal-notebook
 ```
 Then run it. The -p flag is essential to link port 8888 on your own computer to the port 8888 in the Docker container. 
 ```
-    docker run -p 8888:8888 jupyter/minimal-notebook
+docker run -p 8888:8888 jupyter/minimal-notebook
 ```
 When you do this, the terminal will spurt out a series of logs, and you will not be able to do anything further in the terminal. To have Docker run in a detached mode, which will allow you to continue on in the terminal, just add a -d flag.
 ```
-	docker run -p -d 8888:8888 jupyter/minimal-notebook
+docker run -p -d 8888:8888 jupyter/minimal-notebook
 ```
 Now you have an instance of a jupyter notebook running in a container, which you can access the usual way - localhost:8888.
 
