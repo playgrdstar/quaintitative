@@ -1,12 +1,12 @@
 ---
 layout: default
-title:  Generating a butterfly in three.js
-description: Generating a butterfly in three.js
+title:  Generating a Strange Attractor in three.js
+description: Generating a Strange Attractor in three.js
 date:   2021-01-17 00:00:01 +0000
-permalink: /gen_butterfly/
+permalink: /gen_strange_attractor/
 category: Generative Art
 ---
-## Generating a butterfly in three.js
+## Generating a Strange Attractor in three.js
 
 Art and math - An experiment with the lorenz function in three.js
 
