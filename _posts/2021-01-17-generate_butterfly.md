@@ -16,12 +16,13 @@ You would think that these are totally separate fields, but the deeper down the 
 
 As I work in a finance field, dabble in data science, and love both illustration and generative art, these commonalities never fail to amaze me. 
 
-More on this subject another day, but for now, a tutorial on how to a visualisation using three.js and the Lorenz equation.
+More on this subject another day, but for now, a tutorial on how to do a visualisation using three.js and the Lorenz equation.
 
 Edward Lorenz, developed the equation while modelling the weather, and is also credited with the ‘butterfly effect’ - which is basically an insight into how small changes in nature can have huge consequences. 
 
 > Does the flap of a butterfly’s wings in Brazil set off a tornado in Texas?  - Title of Edward Lorenz’s 1972 paper
 
+These are all related to this concept of 'Strange Attractors', of which the Lorenz equation or function is one. So let's try generating it.
 
 First, we set up the scene, camera, lights, and the renderer to render them to the screen.
 ```
