@@ -26,13 +26,17 @@ Essentially, a few points to note -
 
 Computing relative or lognormal returns is fairly straight forward with the shift function in pandas. 
 
-**Relative returns
-	FX_Returns = (FX_DF/FX_DF.shift(1))-1
+**Relative returns**
+```
+FX_Returns = (FX_DF/FX_DF.shift(1))-1
+```
 
-**Lognormal returns
-	FX_DF_LogReturns = np.log(FX_DF/FX_DF.shift(1))
+**Lognormal returns**
+```
+FX_DF_LogReturns = np.log(FX_DF/FX_DF.shift(1))
+```
 
-Now for **Value at Risk.
+Now for **Value at Risk**.
 
 There's nothing very complicated about Value at Risk (VAR). To put it simply, it's simply a single metric that shows the potential losses of a portfolio etc (at different confidence levels). There are two main methods to compute VAR -
 
