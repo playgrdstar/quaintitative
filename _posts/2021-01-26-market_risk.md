@@ -2,7 +2,7 @@
 layout: default
 title:  Measuring Market Risk in Python
 description: Measuring Market Risk in Python
-date:   2021-01-19 00:00:00 +0000
+date:   2021-01-26 00:00:00 +0000
 permalink: /market_risk/
 category: Finance
 ---
