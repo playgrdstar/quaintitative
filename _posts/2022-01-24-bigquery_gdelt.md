@@ -2,7 +2,7 @@
 layout: default
 title:  Extracting and Processing GDELT GKG datasets from BigQuery
 description: Extracting and Processing GDELT GKG datasets from BigQuery
-date:   2022-02-24 00:00:00 +0000
+date:   2022-01-24 00:00:00 +0000
 permalink: /extract_gdelt_gkg_bigquery/
 category: Data Engineering
 ---
