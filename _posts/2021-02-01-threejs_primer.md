@@ -4,7 +4,7 @@ title:  Three.js Series - Simple primer on three.js
 description: Three.js Series - Simple primer on three.js 
 date:   2021-02-01 00:00:01 +0000
 permalink: /primer_threejs/
-category: Data Engineering
+category: Generative Art
 
 ---
 ## Simple primer on three.js 
