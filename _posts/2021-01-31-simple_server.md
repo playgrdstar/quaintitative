@@ -63,52 +63,15 @@ if __name__ == "__main__":
 ```
 
 **Templates**
-Now we move to the templates. `base.html` is the base template, and `extension.html` extends (or is based on) the base template.
+Now we move to the templates. `base.html` is the base template, and `extension.html` extends (or is based on) the base template. 
 
 For `base.html` we basically do the normal HTML stuff, which I have covered before, but with two key differences. We add in stuff between the mustaches `{}`. Basically what we are doing is to either - 
 - Allow the blocks enclosed within the mustaches to be replaced when we extend this base template; and
 - Pass in values assigned to `title` or `bodytext` which we declared earlier when we set up the server.
+
+Take a look at the `base.html` and `extension.html` templates to understand this part.
+
 And that’s it. These are the only differences between a template and the usual static HTML pages.
-
-```
-<title>
-    {% block title %}Simplest Server Ever{% endblock %}
-</title>
-
-...
-
-{% block content %}
-
-<div>
-    <h4 id='title'>{{title}}</h4>
-</div>
-
-<div>
-    <h6>{{bodytext}}</h6>
-</div>
-
-{% endblock %}
-```
-
-The great thing about such templates is that we don’t have to keep re-writing everything. We can build on the base template by inserting this line in `extension.html`.
-```
-{% extends 'base.html' %}
-```
-
-We can then render everything in `base.html`, and replace anything within `{% block content %} ` and `{% endblock %}` with the corresponding block in `extension.html`.
-```
-{% block content %}
-
-<div>
-    <h4 id='title'>{{title_extended}}</h4>
-</div>
-
-<div>
-    <h6>{{bodytext_extended}}</h6>
-</div>
-
-{% endblock %}
-```
 
 And that’s it. Now all you have to do is to type `python run.py` in your terminal and you will see the webpages being served on -
 
