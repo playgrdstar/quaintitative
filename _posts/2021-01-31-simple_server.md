@@ -66,7 +66,7 @@ if __name__ == "__main__":
 Now we move to the templates. `base.html` is the base template, and `extension.html` extends (or is based on) the base template.
 
 For `base.html` we basically do the normal HTML stuff, which I have covered before, but with two key differences. We add in stuff between the mustaches `{}`. Basically what we are doing is to either - 
-- Allow the blocks enclosed within `{%` and `%}` to be replaced when we extend this base template; and
+- Allow the blocks enclosed within `{\%\` and `\%\}` to be replaced when we extend this base template; and
 - Pass in values assigned to `{{title}}` or `{{bodytext}}` which we declared earlier when we set up the server.
 And that’s it. These are the only differences between a template and the usual static HTML pages.
 
