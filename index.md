@@ -10,3 +10,4 @@ I use this blog as a _commonplace book_ to document, as well as share topics rel
 
 If you wish to connect, feel free to email  me at playgrdstar@gmail.com.
 
+
