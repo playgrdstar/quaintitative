@@ -2,7 +2,7 @@
 layout: default
 title:  Style Transfer X Generative Art
 description: Style Transfer X Generative Art
-date:   2022-01-26 00:00:00 +0000
+date:   2021-01-26 00:00:00 +0000
 permalink: /style_transfer_gen_art/
 category: Generative Art
 ---
