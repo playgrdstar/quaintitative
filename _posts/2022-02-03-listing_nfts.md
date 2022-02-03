@@ -55,7 +55,7 @@ Listing an NFT is definitely not costless (but neither was Ebay back in the Web 
 
 ### Gas Fees ###
 
-From the earlier part of the article, you should have understood that gas and service fees play a key role in minting your NFT. Service fees are easy to understand, OpenSea takes 2.5% of each trasaction, i.e. 2.5% of what you manage to sell.
+From the earlier part of the article, you should have understood that gas and service fees play a key role in minting your NFT. Service fees are easy to understand, OpenSea takes 2.5% of each transaction, i.e. 2.5% of the price of the item that you finally sell.
 
 Gas fees are a little more tricky. Gas fees are basically what you pay to miners to perform an operation so as to record your transaction (which can be minting, or a transfer) on the blockchain. On OpenSea, you can either use Ethereum or Polygon. If you choose to use Ethereum, you pay (a lot more) gas fees, as recording a transaction on the Ethereum blockchain has become rather slow and expensive. Gas fees vary based on when you peform the transaction, and how fast you want the transaction to happen. You would probably need to sell your NFT at a base price of around $100 or more to at least break even. 
 
