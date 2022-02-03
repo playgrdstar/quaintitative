@@ -8,6 +8,8 @@ category: Other Random Stuff
 ---
 ## Listing NFTs
 
+![ethereal](/assets/media/ethereal.gif) 
+
 Since everybody (and their dogs) are listing NFTs, I thought I should just do it too, just to understand what is involved, and hopefully learn something useful from the process.
 And since I will almost certainly forget what what went through my mind during this process, I decided to jot down some notes on the key points that I learnt or went through my mind. I'm not very hopeful about selling any of my NFTs, given how crowded the marketplaces have become in the short span of a year or so, so this would be my main takeaway from it.
 
@@ -26,11 +28,6 @@ Note that I highlighted _collections_ of items, rather than individual items. It
 From my perspective, there are a few advantages. First, costs. We will go into this later, but there are costs (gas fees) associated with listing NFTs, and doing it as a collection enables economies of scale. From what I understand and experienced, you will usually pay a one-time gas fee for the first item you sell in a collection, but not the subsequent ones in the collection if you are doing 'lazy-minting'. Do note that gas fees will still apply when you finally sell it though. Second, a collection makes for a more coherent proposition to buyers, as it allows you to develop or create a series of related works that buyers may be interested in, similar to how people collect trading cards with a specific theme. Third, everyone seems to be doing it, so I will just follow the herd.
 
 For me, because of my dual interests in illustration and generative art, I put together two collections on [OpenSea][1], which you can find at these links - illustrations in [Whimsical Ether Reality][2], and generative art videos in [Ethereal Attractors][3].
-
-![ethereal](/assets/media/ethereal.gif) 
-
-https://github.com/playgrdstar/quaintitative/blob/gh-pages/assets/media/whimsical_video.mp4
-
 
 ### Platform ###
 
