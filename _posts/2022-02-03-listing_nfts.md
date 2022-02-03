@@ -129,6 +129,8 @@ The hard part is getting the NFTs out there, and made known to people who are in
 
 I tried sharing the works on Reddit subreddits such as nft, Discord channels such as NFT Asia, and my own social media channels, but this part of the puzzle (which is probably the most important), is something I am still trying to explore. Until then, I think my OpenSea account is just another portfolio site for me.
 
+I suppose the NFT domain is not too different from the art domain. A friend once advised me to understand the artist's marketing capabilities over his artistic or technical capabilties if the intent was to invest in his or her art (rather than just admire it). I suppose this is equally true of NFTs and NFT creators.
+
 
 ~~~
 
