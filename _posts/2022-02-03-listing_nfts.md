@@ -29,7 +29,8 @@ For me, because of my dual interests in illustration and generative art, I put t
 
 ![ethereal](/assets/media/ethereal.gif) 
 
-![whimsical](/assets/media/whimsical_video.mp4) 
+https://github.com/playgrdstar/quaintitative/blob/gh-pages/assets/media/whimsical_video.mp4
+
 
 
 ### Platform ###
