@@ -61,7 +61,7 @@ Gas fees are a little more tricky. Gas fees are basically what you pay to miners
 
 Using Polygon means no gas fees at all. But, there is a significant caveat. 
 
-Most buyers on OpenSea prefer to use Ethereum and also value NFTs on Ethereum more, so you have a higher chance of selling your NFT than if you were to use Polygon. But, as th all things, I think this can change rather quickly. Have a read of this [article][10] if you wish to understand a little more on the dynamics of gas fees on Ethereum versus Polygon, and this [article][11] if you wish to know a little about Polygon.
+Most buyers on OpenSea prefer to use Ethereum and also value NFTs on Ethereum more, so you have a higher chance of selling your NFT than if you were to use Polygon. But, as with all things, I think this can change rather quickly. Have a read of this [article][10] if you wish to understand a little more on the dynamics of gas fees on Ethereum versus Polygon, and this [article][11] if you wish to know a little about Polygon.
 
 > TLDR: Ethereum expensive, higher chance of selling your NFTs; Polygon free, BUT lower chance of selling your NFTs.
 
