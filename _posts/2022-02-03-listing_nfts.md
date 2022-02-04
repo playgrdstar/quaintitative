@@ -18,7 +18,7 @@ I'm not very hopeful about selling any of my NFTs, given how crowded the marketp
 
 Some of these points could potentially be wrong, or outdated. If so, please let me know.
 
-I am going to assume everyone has a basic understanding of what a Non-Fungible Token (NFT) is. _TLDR: unique (i.e. not fungible) content or data stored on the blockchain._ If not, there are plenty of references on the net on this, like [this][6].
+I am going to assume everyone has a basic understanding of what a Non-Fungible Token (NFT) is. _TLDR: unique (i.e. non-fungible) content or data stored on the blockchain._ If not, there are plenty of references on the net on this, like [this][6].
 
 
 ### Content ###
