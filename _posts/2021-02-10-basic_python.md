@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Some Notes relating to Python
-description: Some Notes relating to Python
+title: Some note relating to Python
+description: Some notes relating to Python
 date:   2021-02-10 00:00:00 +0000
 permalink: /python_notes/
 category: Notes
