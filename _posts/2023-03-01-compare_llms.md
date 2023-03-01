@@ -9,7 +9,7 @@ category: Research
 ## Comparing Prompts for Different Large Language Models (Other than ChatGPT)
 ### And notes on using Hugging Face Spaces, Inference APIs and Gradio Blocks
 
-Prompts are what we type into the text box or provide as inputs when we want ChatGPT or other large language models (LLM) to generate a response. ChatGPT (or say the text-davinci model via OpenAI's APIs) work quite nicely with simple prompts. However, better responses can be obtained if we craft our prompts carefully (typically referred to as "prompt engineering").
+Prompts are what we type into the text box or provide as inputs when we want ChatGPT or other large language models (LLM) to generate a response. ChatGPT (or say the text-davinci model via OpenAI's APIs) works quite nicely with simple prompts. However, better responses can be obtained if we craft our prompts carefully (typically referred to as "prompt engineering").
 
 The [Prompt Engineering Guide][1] is an interesting repository (not by me) that contains useful information on prompt engineering, in particular their guides on prompt engineering. However, the prompts and corresponding responses shown in the [Prompt Engineering Guide][1] are for ChatGPT. 
 
